@@ -1,15 +1,30 @@
 package Model;
-public class Square {
-    private double lado;
 
-    public double getPerimeter() { 
-        return lado * 4;
-    }
-    public double getArea(){
-        return lado*lado;
+public class Square extends FigureAbs {
+
+    private double side;
+
+    public Square(double side) {
+        this.side = side;
     }
 
-    public void setLado(double lado) { 
-        this.lado = lado;
+    public double getSide() {
+        return side;
     }
+
+    public void setSide(double side) {
+        this.side = side;
+    }
+
+    @Override
+    public double getArea() {
+        return side * side;
+    }
+
+    @Override
+    public double getPerimeter() {
+
+        return side * 4;
+    }
+
 }
